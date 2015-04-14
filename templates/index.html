@@ -1,0 +1,42 @@
+{assign var='template' value=$tpl scope='global'}
+
+<!DOCTYPE html>
+
+<html lang="fr">
+	<head>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="webroot/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="webroot/css/default.css">
+		<link rel="stylesheet" type="text/css" href="webroot/css/bootstrap-theme.min.css">
+
+		<!-- JS -->
+		<script type="text/javascript" src="webroot/js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="webroot/js/bootstrap.min.js"></script>
+
+		<!-- FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+
+		<!-- TITLE -->
+		<title>HIDS</title>
+		<link rel="shortcut icon" type="image/x-icon" href="webroot/img/prt.png" />
+	<head>
+
+	<body>
+		<div class="container-fluid">
+		  <div class="row header">
+		  		<div class="col-md-12">
+			  		<h1 class="title">Système de détection d'intrusion</h1>
+			  	</div>
+		  </div>
+
+		  {include file=$template}
+
+		  <div class="row footer">
+		  	<div class="col-md-12">
+		  		<img class="logo-epsi" src="webroot/img/epsi-logo.png" alt="epsi-logo">
+		  		<img class="logo-ids" src="webroot/img/ids.png" alt="ids-logo">
+		  	</div>
+		  </div>
+		</div>
+	</body>
+</html>

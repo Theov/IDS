@@ -1,0 +1,44 @@
+body{
+	background-image:url(../img/paper.png);
+}
+
+
+.header .title{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+.footer{
+	background-image:url(../img/out.png);
+	position: fixed;
+    bottom: 0;
+}
+
+.logo-epsi{
+	width: 10%;
+	height: 10%;
+	float: left;
+}
+
+.logo-ids{
+	width: 8%;
+	height: 8%;
+	float: right;
+}
+
+.authForm{
+	margin: 8% auto !important;
+   	float: none !important;
+   	background-image:url(../img/out.png);
+   	padding: 5% 5%;
+   	border: 3px solid Cornsilk;
+   	border-radius: 20px;
+   	text-align: center;
+   	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.authForm label{
+	text-align: left !important;
+}
