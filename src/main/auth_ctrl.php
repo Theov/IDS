@@ -15,7 +15,7 @@ class auth_ctrl{
 	public function log(){
 		$authIsOKay = FALSE;
 
-		if(isset($_POST["name"]) && isset($_POST["pass"])){
+		if($this->inputAreFilled()){
 			$authIsOKay = TRUE;
 		}
 
@@ -29,11 +29,14 @@ class auth_ctrl{
 		}
 
 		if($authIsOKay){
-			$this->tpl->assign('res','Welcome !');
+			$this->tpl->assign('res','Auth ok !');
+            $_SESSION["token"] = helper::encrypt($_POST["pass"]);
 			helper::redirect("?p=index&a=all");
+		}else if(!$this->inputAreFilled()){
+			$this->tpl->assign('res','Bienvenue');
 		}else{
-			$this->tpl->assign('res','Authentification érronée !');
-		}
+            $this->tpl->assign('res','Authentification érronée !');
+        }
 	}
 
 	public function welcome(){
@@ -49,8 +52,16 @@ class auth_ctrl{
 		return $queryResult[0][0];
 	}
 
+    public function callpre(){
+    }
+
 	public function callback(){
 		$this->loadView();
 	}
+
+    public function inputAreFilled()
+    {
+        return isset($_POST["name"]) && isset($_POST["pass"]);
+    }
 }
 ?>
