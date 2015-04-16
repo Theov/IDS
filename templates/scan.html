@@ -1,45 +1,41 @@
 <div class="row">
     <div class="col-md-10 center content">
-        <h1 class="text-center">Derniers scans</h1>
-
         <table class="table tableW100">
             <thead>
                 <tr class="active">
                     <td>
-                        <h3>#</h3>
+                        <h4>#</h4>
                     </td>
                     <td>
-                        <h3>Date</h3>
+                        <h4>Date debut</h4>
                     </td>
                     <td>
-                        <h3>Durée</h3>
+                        <h4>Date fin</h4>
+                    </td>
+                    <td>
+                        <h4>Outils</h4>
                     </td>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td>
-                        <p>0</p>
-                    </td>
-                    <td>
-                        <p>16/04/2015</p>
-                    </td>
-                    <td>
-                        <p>25 min 12 sec</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>0</p>
-                    </td>
-                    <td>
-                        <p>16/04/2015</p>
-                    </td>
-                    <td>
-                        <p>25 min 12 sec</p>
-                    </td>
-                </tr>
+                {foreach from=$scanData item=scan}
+                    <tr>
+                        <td>
+                            <p>{$scan.id}</p>
+                        </td>
+                        <td>
+                            <p>{$scan.date_debut}</p>
+                        </td>
+                        <td>
+                            <p>{$scan.date_fin}</p>
+                        </td>
+                        <td>
+                            <a href="?p=index&a=detail&id={$scan.id}"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                            <a href="?p=index&a=delete&id={$scan.id}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                        </td>
+                    </tr>
+                {/foreach}
             </tbody>
         </table>
     </div>
