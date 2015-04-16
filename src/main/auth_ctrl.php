@@ -1,17 +1,5 @@
 <?php
-class auth_ctrl{
-	private $tpl;
-	private $db;
-
-	public function __construct($_tpl, $_db){
-		$this->db = $_db;
-		$this->tpl = $_tpl;
-	}
-
-	private function loadView(){
-		$this->tpl->assign('tpl','auth.html');
-	}
-
+class auth_ctrl extends MainController{
 	public function log(){
 		$authIsOKay = FALSE;
 
@@ -50,13 +38,6 @@ class auth_ctrl{
 		$queryResult = $sth->fetchAll();
 
 		return $queryResult[0][0];
-	}
-
-    public function callpre(){
-    }
-
-	public function callback(){
-		$this->loadView();
 	}
 
     public function inputAreFilled()

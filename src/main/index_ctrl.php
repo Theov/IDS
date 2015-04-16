@@ -1,15 +1,5 @@
 <?php
-class index_ctrl{
-
-    public function __construct($_tpl, $_db){
-        $this->db = $_db;
-        $this->tpl = $_tpl;
-    }
-
-    private function loadView(){
-        $this->tpl->assign('tpl','scan.html');
-    }
-
+class index_ctrl extends MainController{
     public function all(){
 
     }
@@ -22,6 +12,6 @@ class index_ctrl{
     }
 
     public function callback(){
-        $this->loadView();
+        $this->templateName = "scan";
     }
 }

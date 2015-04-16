@@ -1,7 +1,20 @@
 body{
-	background-image:url(../img/paper.png);
+	background-image:url(../img/out.png);
 }
 
+.content{
+    background-image:url(../img/paper.png);
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.tableW100{
+    width: 95%;
+}
+
+.center{
+    margin: 0 10%;
+}
 
 .header .title{
 	font-family: 'Montserrat', sans-serif;
@@ -29,7 +42,6 @@ body{
 .authForm{
 	margin: 8% auto !important;
    	float: none !important;
-   	background-image:url(../img/out.png);
    	padding: 5% 5%;
    	border: 3px solid Cornsilk;
    	border-radius: 20px;

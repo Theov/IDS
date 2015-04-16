@@ -35,11 +35,13 @@ class Controller{
             $ctrl->callpre();
             $ctrl->$act();
             $ctrl->callback();
+            $ctrl->loadView();
         }else{
             $ctrl = new auth_ctrl($this->tpl, $this->db);
             $ctrl->callpre();
             $ctrl->welcome();
             $ctrl->callback();
+            $ctrl->loadView();
         }
 
         $this->tpl->display('index.html');
