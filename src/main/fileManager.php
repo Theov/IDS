@@ -32,7 +32,6 @@ class FileManager
 
   private function calculateChecksum(){
   	$fileAndSumMap = array();
-  	$index = 0;
 
   	foreach ($this->fileList as $file)
   		array_push($fileAndSumMap, array("file" => $file,"sum" => sha1_file($file)));

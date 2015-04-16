@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-10 center content">
+        <form method="post">
+            <div class="form-group">
+                <label for="dir">Répertoire à scanner</label>
+                <input type="text" class="form-control" id="dir" name="dir" placeholder="Répertoire à scanner" value="{$cfgData.directory}">
+            </div>
+
+            <div class="form-group">
+                <label for="fil">Fichier d'exclusion</label>
+                <input type="text" class="form-control" id="fil" name="fil" placeholder="Fichier d'exclusion" value="{$cfgData.file}">
+            </div>
+
+            <button type="submit" class="btn btn-default">Mettre à jour</button>
+        </form>
+    </div>
+
+    <div class="col-md-2">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="?p=index&a=all">Scan</a></li>
+                        <li><a href="?p=user&a=all">Utilisateurs</a></li>
+                        <li><a href="?p=user&a=deco">Deconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
