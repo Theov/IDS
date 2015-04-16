@@ -12,6 +12,8 @@ class scan_ctrl extends MainController{
     }
 
     public function launch(){
+        $this->addBeginningData();
+
         $cfgData = $this->getConfigData();
         $xmlParser = new XMLParser($cfgData["file"]);
 
@@ -19,7 +21,11 @@ class scan_ctrl extends MainController{
         $fileManager->launchFileScan();
         $scanResult = $fileManager->fileAndSumMap();
 
-        echo "<pre>"; print_r($scanResult); echo "</pre>"; die;
+        $this->addCoreData($scanResult);
+
+        $this->addEndingData();
+
+        helper::redirect("?p=index&a=all");
 
     }
 
@@ -30,5 +36,28 @@ class scan_ctrl extends MainController{
         $queryResult = $sth->fetchAll();
 
         return $queryResult[0];
+    }
+
+    private function addCoreData($scanResult){
+        foreach($scanResult as $f){
+            $this->db->exec("INSERT INTO file (`file`, `sum`, `scan_id`) VALUES ('". $f["file"] ."', '". $f["sum"] ."', ". $this->getScanId() .")");
+        }
+    }
+
+    private function addBeginningData(){
+        $this->db->exec("INSERT INTO scan (`date_debut`) VALUES (NOW())");
+    }
+
+    private function addEndingData(){
+        $this->db->exec("UPDATE scan SET date_fin = NOW() WHERE id = " . $this->getScanId());
+    }
+
+    private function getScanId(){
+        $query = "SELECT MAX(id) FROM scan";
+        $sth = $this->db->prepare($query);
+        $sth->execute();
+        $queryResult = $sth->fetchAll();
+
+        return $queryResult[0][0];
     }
 }
