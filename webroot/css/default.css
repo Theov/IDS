@@ -21,6 +21,10 @@ body{
 	text-align: center;
 }
 
+.header{
+    margin-top: 2%;
+}
+
 .footer{
 	background-image:url(../img/out.png);
 	position: fixed;

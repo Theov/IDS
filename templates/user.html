@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-md-10 center content">
+        <table class="table tableW100">
+            <thead>
+            <tr class="active">
+                <td>
+                    <h4>#</h4>
+                </td>
+                <td>
+                    <h4>Nom</h4>
+                </td>
+                <td>
+                    <h4>Outils</h4>
+                </td>
+            </tr>
+            </thead>
+
+            <tbody>
+            {foreach from=$userData item=user}
+            <tr>
+                <td>
+                    <p>{$user.id}</p>
+                </td>
+                <td>
+                    <p>{$user.name}</p>
+                </td>
+                <td>
+                    <a href="?p=user&a=delete&id={$user.id}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                </td>
+            </tr>
+            {/foreach}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-2 center content">
+        <form method="post" action="?p=user&a=add">
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nom">
+                </div>
+                <div class="form-group">
+                    <label for="verifPass">Mot de passe</label>
+                    <input type="password" class="form-control" name="pass" id="pass" placeholder="Mot de passe">
+                </div>
+                <div class="form-group">
+                    <label for="verifPass">Vérification du mot de passe</label>
+                    <input type="password" class="form-control" name="verifPass" id="verifPass" placeholder="Verification">
+                </div>
+                <button type="submit" class="btn btn-default">Ajouter</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-2">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="?p=index&a=all">Scan</a></li>
+                        <li><a href="?p=user&a=all">Utilisateurs</a></li>
+                        <li><a href="?p=user&a=deco">Deconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
