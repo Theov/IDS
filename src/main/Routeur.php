@@ -7,8 +7,8 @@ class Routeur{
     private $requestIsLegit;
 
     function __construct(){
-        $this->allowedPage = ["auth", "index", "user", "conf", "scan"];
-        $this->allowedAction = ["log", "welcome", "all", "detail", "delete", "add", "deco", "launch"];
+        $this->allowedPage = ["auth", "index", "user", "conf", "scan", "result"];
+        $this->allowedAction = ["log", "welcome", "all", "detail", "delete", "add", "deco", "launch", "check"];
 
         $this->defaultRedirectionPage = "auth";
         $this->defaultAction = "welcome";
