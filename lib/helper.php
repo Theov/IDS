@@ -28,5 +28,18 @@ abstract class helper{
 
         return $s;
     }
+
+    public function sendMail($msg){
+        $to = 'vermerschth@gmail.com';
+        $subject = 'HIDS rapport de scan';
+        $headers  = 'From: hids.epsi@gmail.com' . "\r\n" .
+            'MIME-Version: 1.0' . "\r\n" .
+            'Content-type: text/html; charset=utf-8';
+
+        if(mail($to, $subject, $msg, $headers))
+            echo "Email sent";
+        else
+            echo "Email sending failed";
+    }
 }
 ?>

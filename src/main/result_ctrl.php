@@ -10,8 +10,7 @@ class result_ctrl extends MainController
         }
     }
 
-    public function callback()
-    {
+    public function callback(){
         $this->templateName = "result";
     }
 
