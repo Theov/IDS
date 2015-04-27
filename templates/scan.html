@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-md-10 center content">
 
-        <a href="?p=conf&a=all"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
-        <a href="?p=scan&a=launch"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>
-        <a href="?p=scan&a=check"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+        <a href="?p=conf&a=all" data-toggle="tooltip" data-placement="top" title="Configuration"><span class="glyphicon glyphicon-wrench icon" aria-hidden="true"></span></a>
+        <a href="?p=scan&a=launch" data-toggle="tooltip" data-placement="top" title="Lancer un scan"><span class="glyphicon glyphicon-play icon" aria-hidden="true"></span></a>
+        <a href="?p=scan&a=check" data-toggle="tooltip" data-placement="top" title="Détécter une intrusion"><span class="glyphicon glyphicon-eye-open icon" aria-hidden="true"></span></a>
 
         <table class="table tableW100">
             <thead>
@@ -36,8 +36,8 @@
                             <p>{$scan.date_fin}</p>
                         </td>
                         <td>
-                            <a href="?p=result&a=detail&id={$scan.id}"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-                            <a href="?p=index&a=delete&id={$scan.id}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                            <a href="?p=result&a=detail&id={$scan.id}" data-toggle="tooltip" data-placement="right" title="Voir les détails"><span class="glyphicon glyphicon-search icon" aria-hidden="true"></span></a>
+                            <a href="?p=index&a=delete&id={$scan.id}" data-toggle="tooltip" data-placement="right" title="Supprimer"><span class="glyphicon glyphicon-remove icon" aria-hidden="true"></span></a>
                         </td>
                     </tr>
                 {/foreach}
@@ -45,17 +45,5 @@
         </table>
     </div>
 
-    <div class="col-md-2">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="?p=index&a=all">Scan</a></li>
-                    <li><a href="?p=user&a=all">Utilisateurs</a></li>
-                    <li><a href="?p=user&a=deco">Deconnexion</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    </div>
+    {include file='nav.html'}
 </div>

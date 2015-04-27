@@ -58,3 +58,8 @@ body{
 .authForm label{
 	text-align: left !important;
 }
+
+.icon{
+    font-size: 15px;
+    color: #4A00AC;
+}
