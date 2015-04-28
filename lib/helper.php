@@ -30,16 +30,18 @@ abstract class helper{
     }
 
     public function sendMail($msg){
-        $to = 'vermerschth@gmail.com';
-        $subject = 'HIDS rapport de scan';
+        $to       = 'vermerschth@gmail.com';
+        $subject  = 'Testing sendmail.exe';
         $headers  = 'From: hids.epsi@gmail.com' . "\r\n" .
-            'MIME-Version: 1.0' . "\r\n" .
-            'Content-type: text/html; charset=utf-8';
+                    'MIME-Version: 1.0' . "\r\n" .
+                    'Content-type: text/html; charset=utf-8';
 
         if(mail($to, $subject, $msg, $headers))
             echo "Email sent";
         else
             echo "Email sending failed";
+
+        die;
     }
 }
 ?>

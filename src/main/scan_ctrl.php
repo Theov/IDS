@@ -26,7 +26,6 @@ class scan_ctrl extends MainController{
         $this->addEndingData();
 
         helper::redirect("?p=index&a=all");
-
     }
 
     public function check(){
@@ -42,22 +41,23 @@ class scan_ctrl extends MainController{
             $scanAreEquivalent = TRUE;
         }
 
-        if($scanAreEquivalent){
-            $intrusionDetected = FALSE;
+        $intrusionDetected = FALSE;
 
+        if($scanAreEquivalent){
             foreach($lastScanData as $entry){
-                if(!$intrusionDetected){
-                    if(!$this->checkEntryCorrespondance($entry, $previousScanData)){
-                        $intrusionDetected = TRUE;
-                    }
+                if(!$this->checkEntryCorrespondance($entry, $previousScanData)) {
+                    $intrusionDetected = TRUE;
+                    $this->db->exec("UPDATE file SET valid = 1 WHERE id = " . $entry["id"]);
                 }
             }
         }
 
         if($intrusionDetected){
-            helper::sendMail("Intrusion détéctée !");
+            $this->db->exec("UPDATE scan SET result = 1 WHERE id = " . $this->getScanId());
+            //helper::sendMail("Intrusion détéctée !");
         }else{
-            helper::sendMail("aucun intrusion détéctée !");
+            $this->db->exec("UPDATE scan SET result = 0 WHERE id = " . $this->getScanId());
+            //helper::sendMail("aucun intrusion détéctée !");
         }
 
         helper::redirect("?p=index&a=all");
@@ -85,7 +85,7 @@ class scan_ctrl extends MainController{
     }
 
     private function getScanData($scanId){
-        $query = "SELECT file, sum FROM file WHERE scan_id = " . $scanId;
+        $query = "SELECT id, file, sum, valid FROM file WHERE scan_id = " . $scanId;
         $sth = $this->db->prepare($query);
         $sth->execute();
         $queryResult = $sth->fetchAll();
@@ -104,12 +104,12 @@ class scan_ctrl extends MainController{
 
     private function addCoreData($scanResult){
         foreach($scanResult as $f){
-            $this->db->exec("INSERT INTO file (`file`, `sum`, `scan_id`) VALUES ('". $f["file"] ."', '". $f["sum"] ."', ". $this->getScanId() .")");
+            $this->db->exec("INSERT INTO file (`file`, `sum`, `valid`, `scan_id`) VALUES ('". $f["file"] ."', '". $f["sum"] ."', 0, ". $this->getScanId() .")");
         }
     }
 
     private function addBeginningData(){
-        $this->db->exec("INSERT INTO scan (`date_debut`) VALUES (NOW())");
+        $this->db->exec("INSERT INTO scan (`date_debut`, `result`) VALUES (NOW(), 1)");
     }
 
     private function addEndingData(){

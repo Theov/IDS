@@ -63,3 +63,7 @@ body{
     font-size: 15px;
     color: #4A00AC;
 }
+
+.scroll{
+    overflow-y: scroll;
+}

@@ -5,7 +5,7 @@
         <a href="?p=scan&a=launch" data-toggle="tooltip" data-placement="top" title="Lancer un scan"><span class="glyphicon glyphicon-play icon" aria-hidden="true"></span></a>
         <a href="?p=scan&a=check" data-toggle="tooltip" data-placement="top" title="Détécter une intrusion"><span class="glyphicon glyphicon-eye-open icon" aria-hidden="true"></span></a>
 
-        <table class="table tableW100">
+        <table class="table tableW100 scroll">
             <thead>
                 <tr class="active">
                     <td>
@@ -36,7 +36,7 @@
                             <p>{$scan.date_fin}</p>
                         </td>
                         <td>
-                            <a href="?p=result&a=detail&id={$scan.id}" data-toggle="tooltip" data-placement="right" title="Voir les détails"><span class="glyphicon glyphicon-search icon" aria-hidden="true"></span></a>
+                            <a href="?p=result&a=detail&id={$scan.id}" data-toggle="tooltip" data-placement="left" title="Voir les détails"><span class="glyphicon glyphicon-search icon" aria-hidden="true"></span></a>
                             <a href="?p=index&a=delete&id={$scan.id}" data-toggle="tooltip" data-placement="right" title="Supprimer"><span class="glyphicon glyphicon-remove icon" aria-hidden="true"></span></a>
                         </td>
                     </tr>

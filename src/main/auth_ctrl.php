@@ -22,8 +22,10 @@ class auth_ctrl extends MainController{
 			helper::redirect("?p=index&a=all");
 		}else if(!$this->inputAreFilled()){
 			$this->tpl->assign('res','Bienvenue');
+            $this->tpl->assign('alert','Veuillez remplir tout les champs !');
 		}else{
             $this->tpl->assign('res','Authentification érronée !');
+            $this->tpl->assign('alert','Authentification érronée !');
         }
 	}
 

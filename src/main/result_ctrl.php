@@ -19,7 +19,7 @@ class result_ctrl extends MainController
     }
 
     private function getFileData(){
-        $query = "SELECT file, sum FROM file WHERE scan_id = " . $_GET["id"];
+        $query = "SELECT file, sum, valid FROM file WHERE scan_id = " . $_GET["id"];
         $sth = $this->db->prepare($query);
         $sth->execute();
         $queryResult = $sth->fetchAll();
