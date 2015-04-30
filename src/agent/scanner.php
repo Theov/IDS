@@ -141,7 +141,7 @@ class Agent{
 
     public function check(){
         $lastScanId = $this->getScanId();
-        $previousScanId = $lastScanId - 1;
+        $previousScanId = $this->getScanRefId();
 
         $lastScanData = $this->getScanData($lastScanId);
         $previousScanData = $this->getScanData($previousScanId);
@@ -167,6 +167,7 @@ class Agent{
             $this->db->exec("UPDATE scan SET result = 1 WHERE id = " . $this->getScanId());
             //helper::sendMail("Intrusion détéctée !");
         }else{
+            $this->updateRef($this->getScanId());
             $this->db->exec("UPDATE scan SET result = 0 WHERE id = " . $this->getScanId());
             //helper::sendMail("aucun intrusion détéctée !");
         }
@@ -212,6 +213,19 @@ class Agent{
         $queryResult = $sth->fetchAll();
 
         return $queryResult[0];
+    }
+
+    public function getScanRefId(){
+        $query = "SELECT scan_id FROM ref WHERE id = 1";
+        $sth = $this->db->prepare($query);
+        $sth->execute();
+        $queryResult = $sth->fetchAll();
+
+        return $queryResult[0][0];
+    }
+
+    public function updateRef($id){
+        $this->db->exec("UPDATE ref SET scan_id = ".$id." WHERE id = " . 1);
     }
 
 }

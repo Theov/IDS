@@ -18,6 +18,9 @@
                         <h4>Date fin</h4>
                     </td>
                     <td>
+                        <h4>Référence</h4>
+                    </td>
+                    <td>
                         <h4>Outils</h4>
                     </td>
                 </tr>
@@ -36,8 +39,16 @@
                             <p>{$scan.date_fin}</p>
                         </td>
                         <td>
+                            {if $scan.id eq $refId }
+                                <span class="glyphicon glyphicon-ok icon" aria-hidden="true"></span>
+                            {else}
+                                <span class="glyphicon glyphicon-remove icon" aria-hidden="true"></span>
+                            {/if}
+                        </td>
+                        <td>
                             <a href="?p=result&a=detail&id={$scan.id}" data-toggle="tooltip" data-placement="left" title="Voir les détails"><span class="glyphicon glyphicon-search icon" aria-hidden="true"></span></a>
                             <a href="?p=index&a=delete&id={$scan.id}" data-toggle="tooltip" data-placement="right" title="Supprimer"><span class="glyphicon glyphicon-remove icon" aria-hidden="true"></span></a>
+                            <a href="?p=index&a=ref&id={$scan.id}" data-toggle="tooltip" data-placement="right" title="Passer en référence"><span class="glyphicon glyphicon-fire icon" aria-hidden="true"></span></a>
                         </td>
                     </tr>
                 {/foreach}

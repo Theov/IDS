@@ -17,6 +17,7 @@ class Controller{
 
 	private function exec(){
         $this->preventInjectionAttack();
+        $this->checkClientIPAivalability();
 
 		$url = substr(split("&a=", $this->router->getUserRequest())[0], 3);
 		$act = split("&a=", $this->router->getUserRequest())[1];
@@ -55,6 +56,14 @@ class Controller{
         foreach($_POST as $key =>  $post){
             $_POST[$key] = helper::securiseString($post);
         }
+    }
+
+    private function checkClientIPAivalability(){
+       if($_SERVER['REMOTE_ADDR'] != "::1"){
+           echo "Votre poste ne peu pas accéder à l'HIDS !";
+           exit;
+           die;
+       }
     }
 }
 
