@@ -1,10 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<script type="application/javascript">
+    {literal}
+        var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+        var lineChartData = {
+            labels : ["1","2","3","4","5"],
+            datasets : [
+                {
+                    label: "Nombre de fichiers",
+                    fillColor : "rgba(50,50,50,0.2)",
+                    strokeColor : "rgba(10,10,10,1)",
+                    pointColor : "rgba(220,220,220,1)",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#fff",
+                    pointHighlightStroke : "rgba(220,220,220,1)",
+                    data : [{/literal}{$scanData4.0}{literal},{/literal}{$scanData3.0}{literal},{/literal}{$scanData2.0}{literal},{/literal}{$scanData1.0}{literal},{/literal}{$scanData0.0}{literal}]
+                },
 
-</body>
-</html>
+
+                    {
+                        label: "Fichier intégre",
+                        fillColor : "rgba(0,255,0,0.2)",
+                        strokeColor : "rgba(220,220,220,1)",
+                        pointColor : "rgba(220,220,220,1)",
+                        pointStrokeColor : "#fff",
+                        pointHighlightFill : "#fff",
+                        pointHighlightStroke : "rgba(220,220,220,1)",
+                        data : [{/literal}{$scanDataV4.0}{literal},{/literal}{$scanDataV3.0}{literal},{/literal}{$scanDataV2.0}{literal},{/literal}{$scanDataV1.0}{literal},{/literal}{$scanDataV0.0}{literal}]
+                },
+
+
+
+                    {
+                        label: "Fichier non intégre",
+                        fillColor : "rgba(255,0,0,0.2)",
+                        strokeColor : "rgba(220,220,220,1)",
+                        pointColor : "rgba(220,220,220,1)",
+                        pointStrokeColor : "#fff",
+                        pointHighlightFill : "#fff",
+                        pointHighlightStroke : "rgba(220,220,220,1)",
+                        data : [{/literal}{$scanDataF4.0}{literal},{/literal}{$scanDataF3.0}{literal},{/literal}{$scanDataF2.0}{literal},{/literal}{$scanDataF1.0}{literal},{/literal}{$scanDataF0.0}{literal}]
+                }
+            ]
+
+
+
+        }
+        window.onload = function(){
+            var ctx = document.getElementById("myChart").getContext("2d");
+            window.myLine = new Chart(ctx).Line(lineChartData, {
+                //responsive: true
+            });
+        }
+    {/literal}
+</script>
+
+<div class="row">
+    <div class="col-md-10 center content">
+        <div class="div-center">
+            <h3>Nombre de fichiers scannés pour les 5 derniers Scans</h3>
+            <canvas id="myChart" height="500" width="500"></canvas>
+
+                <li>Bleu : nombre de fichiers total</li>
+                <li>Vert : nombre de fichiers intégre</li>
+                <li>Rouge : nombre de fichiers altéré</li>
+            
+        </div>
+    </div>
+
+    {include file='nav.html'}
+</div>

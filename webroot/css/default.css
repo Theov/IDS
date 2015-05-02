@@ -16,6 +16,10 @@ body{
     margin: 0 10%;
 }
 
+.div-center{
+    margin:0 auto;
+}
+
 .header .title{
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
