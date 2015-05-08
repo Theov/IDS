@@ -1,3 +1,4 @@
 /templates_c
 /vendor
 composer.lock
+.idea
