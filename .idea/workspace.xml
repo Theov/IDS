@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8deef3d4-3362-410e-a38e-6a41a6637f2a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/configuration.php" afterPath="$PROJECT_DIR$/cfg/configuration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/default.css" afterPath="$PROJECT_DIR$/webroot/css/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/stat.html" afterPath="$PROJECT_DIR$/templates/stat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\cfg\classLoader.php" afterPath="$PROJECT_DIR$/src/main/loader/classLoader.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\Controller.php" afterPath="$PROJECT_DIR$/src/main/core/Controller.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\MainController.php" afterPath="$PROJECT_DIR$/src/main/core/MainController.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\Routeur.php" afterPath="$PROJECT_DIR$/src/main/core/Routeur.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\XMLParser.php" afterPath="$PROJECT_DIR$/src/main/utils/XMLParser.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\auth_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/auth_ctrl.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\conf_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/conf_ctrl.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\fileManager.php" afterPath="$PROJECT_DIR$/src/main/utils/fileManager.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\index_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/index_ctrl.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\main.php" afterPath="$PROJECT_DIR$/src/main/loader/main.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\mysqlSingleton.php" afterPath="$PROJECT_DIR$/src/main/loader/mysqlSingleton.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\result_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/result_ctrl.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\scan_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/scan_ctrl.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\smartySingleton.php" afterPath="$PROJECT_DIR$/src/main/loader/smartySingleton.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\stat_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/stat_ctrl.php" />
-      <change type="MOVED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\main\user_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/user_ctrl.php" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\HIDS.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\deployment.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\.idea\workspace.xml" afterPath="" />
     </list>
     <ignored path="HIDS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +34,18 @@
     <favorites_list name="HIDS" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.08199357" vertical-offset="0" max-vertical-offset="622">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
@@ -98,6 +98,7 @@
         <option value="$PROJECT_DIR$/src/main/loader/classLoader.php" />
         <option value="$PROJECT_DIR$/webroot/css/default.css" />
         <option value="$PROJECT_DIR$/src/main/ctrl/scan_ctrl.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -368,20 +369,33 @@
       <option name="project" value="LOCAL" />
       <updated>1430403555333</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Refactorisation Source directories">
+      <created>1431097280978</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1431097280978</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update gitginore">
+      <created>1431097360408</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1431097360408</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1525926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36592594" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16837482" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16837482" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -390,7 +404,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36592594" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1525926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -425,7 +438,9 @@
     <MESSAGE value="[Scan check]&#10;Full scan&#10;Detail from scan" />
     <MESSAGE value="[Scan]&#10;- adding autonom agent&#10;- adding automatic service for win" />
     <MESSAGE value="[Scan]&#10;- adding reference to scan&#10;&#10;[BDD]&#10;- adding struct&#10;- adding sample datas" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Scan]&#10;- adding reference to scan&#10;&#10;[BDD]&#10;- adding struct&#10;- adding sample datas" />
+    <MESSAGE value="Refactorisation Source directories" />
+    <MESSAGE value="update gitginore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitginore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -434,13 +449,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/core/Routeur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1224">
-          <caret line="10" column="108" selection-start-line="10" selection-start-column="108" selection-end-line="10" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/scan.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1122">
@@ -705,6 +713,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769" vertical-offset="51" max-vertical-offset="1224">
           <caret line="9" column="86" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -832,6 +841,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.82125604" vertical-offset="102" max-vertical-offset="1105">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08199357" vertical-offset="0" max-vertical-offset="622">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding />
         </state>
       </provider>
