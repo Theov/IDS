@@ -8,7 +8,11 @@ define("BASE_URI", "http://localhost/HIDS/");
 //Directory
 define("ABS_PATH", "D:/Developpement/ressources/XAMPP/htdocs/HIDS");
 define("SRC_DIR", "/src/main");
+define("UTILS_DIR", "/utils");
+define("CTRL_DIR", "/ctrl");
+define("CORE_DIR", "/core");
 define("CFG_DIR", "/cfg");
+define("LOADER_DIR", "/loader");
 define("WEB_ROOT_DIR", "/webroot");
 define("TPL_DIR", WEB_ROOT_DIR . "/template");
 
@@ -33,7 +37,7 @@ define("E_SALT", "agQEGAga16gaeg6GEAGAEg6ae1gae76gae6g1ae6g4ae7gae6GAgae6g1eagea
 
 /*   ___   CLASS LOADER   ___   */
 
-include("cfg/classLoader.php");
+include("src/main/loader/classLoader.php");
 
 session_start();
 ?>

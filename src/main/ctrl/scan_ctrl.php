@@ -43,16 +43,16 @@ class scan_ctrl extends MainController{
 
         $intrusionDetected = FALSE;
 
-        if($scanAreEquivalent){
-            foreach($lastScanData as $entry){
-                if(!$this->checkEntryCorrespondance($entry, $previousScanData)) {
-                    $intrusionDetected = TRUE;
-                    $this->db->exec("UPDATE file SET valid = 1 WHERE id = " . $entry["id"]);
-                }
-            }
+
+        foreach($lastScanData as $entry){
+           if(!$this->checkEntryCorrespondance($entry, $previousScanData)) {
+               $intrusionDetected = TRUE;
+               $this->db->exec("UPDATE file SET valid = 1 WHERE id = " . $entry["id"]);
+           }
         }
 
-        if($intrusionDetected){
+
+        if($intrusionDetected || !$scanAreEquivalent){
             $this->db->exec("UPDATE scan SET result = 1 WHERE id = " . $this->getScanId());
             //helper::sendMail("Intrusion détéctée !");
         }else{

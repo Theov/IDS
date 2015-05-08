@@ -5,7 +5,52 @@ body{
 .content{
     background-image:url(../img/paper.png);
     border-radius: 20px;
+    border: 4px solid #666666;
     padding: 2%;
+}
+
+#myChart{
+    float: left;
+}
+
+.stat-legend{
+    text-decoration: dashed;
+    margin :0 2%;
+}
+
+.txt-red{
+    color: #b92c28;
+}
+
+.txt-blue{
+    color: #005580;
+}
+
+.txt-green{
+    color:#2ca02c;
+}
+
+.txt-center{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.center{
+    float:center;
+}
+
+.w80 {
+    width: 50%;
+}
+
+.h80{
+    height: 50%;
 }
 
 .tableW100{
@@ -31,7 +76,7 @@ body{
 
 .footer{
 	background-image:url(../img/out.png);
-	position: fixed;
+	/*position: fixed;*/
     bottom: 0;
 }
 

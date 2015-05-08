@@ -47,7 +47,7 @@
         window.onload = function(){
             var ctx = document.getElementById("myChart").getContext("2d");
             window.myLine = new Chart(ctx).Line(lineChartData, {
-                //responsive: true
+                responsive: true
             });
         }
     {/literal}
@@ -55,14 +55,12 @@
 
 <div class="row">
     <div class="col-md-10 center content">
-        <div class="div-center">
-            <h3>Nombre de fichiers scannés pour les 5 derniers Scans</h3>
-            <canvas id="myChart" height="500" width="500"></canvas>
-
-                <li>Bleu : nombre de fichiers total</li>
-                <li>Vert : nombre de fichiers intégre</li>
-                <li>Rouge : nombre de fichiers altéré</li>
-            
+        <h3 class="txt-center">Résultat des 5 derniers scans</h3>
+        <div class="div-center w80 h80">
+            <canvas id="myChart"></canvas>
+            <p class="stat-legend left txt-blue">Bleu : nombre de fichiers scannés</p>
+            <p class="stat-legend right txt-green">Vert : fichiers intégres</p>
+            <p class="stat-legend center txt-red">Rouge : Fichier altérés</p>
         </div>
     </div>
 
