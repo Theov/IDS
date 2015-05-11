@@ -2,3 +2,7 @@
 /vendor
 composer.lock
 .idea
+/src/agent/agentClient/target
+/src/agent/agentClient/.idea
+/src/agent/agentServer/target
+/src/agent/agentServer/.idea

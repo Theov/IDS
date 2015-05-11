@@ -1,0 +1,45 @@
+<script type="application/javascript">
+    {literal}
+        $(document).ready(function() {
+            setInterval("location.reload();", 5000);
+        });
+    {/literal}
+</script>
+
+<div class="row">
+    <div class="col-md-9 center content">
+        <table class="table tableW100 scroll">
+            <thead>
+            <tr class="active">
+                <td>
+                    <h4>#</h4>
+                </td>
+                <td>
+                    <h4>Location</h4>
+                </td>
+                <td>
+                    <h4>Etat</h4>
+                </td>
+            </tr>
+            </thead>
+
+            <tbody>
+            {foreach from=$agentData item=scan}
+            <tr>
+                <td>
+                    {$scan.id}
+                </td>
+                <td>
+                    {$scan.location}
+                </td>
+                <td>
+                    {$scan.state}
+                </td>
+            </tr>
+            {/foreach}
+            </tbody>
+        </table>
+    </div>
+
+    {include file='nav.html'}
+</div>

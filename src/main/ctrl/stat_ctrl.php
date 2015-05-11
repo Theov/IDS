@@ -1,12 +1,5 @@
 <?php
 class stat_ctrl extends MainController{
-    public function callpre(){
-        if(!isset($_SESSION["token"])){
-            session_unset();
-            helper::redirect("");
-        }
-    }
-
     public function callback(){
         $this->templateName = "stat";
     }

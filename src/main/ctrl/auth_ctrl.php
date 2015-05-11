@@ -1,5 +1,9 @@
 <?php
 class auth_ctrl extends MainController{
+    public function callpre(){
+
+    }
+
 	public function log(){
 		$authIsOKay = FALSE;
 
