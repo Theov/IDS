@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8deef3d4-3362-410e-a38e-6a41a6637f2a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/core/Controller.php" afterPath="$PROJECT_DIR$/src/main/core/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/loader/smartySingleton.php" afterPath="$PROJECT_DIR$/src/main/loader/smartySingleton.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HIDS.iws" />
@@ -38,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20611916" vertical-offset="195" max-vertical-offset="1275">
+            <state vertical-scroll-proportion="-4.923077" vertical-offset="195" max-vertical-offset="1275">
               <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smartySingleton.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/loader/smartySingleton.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="621">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -115,6 +125,7 @@
         <option value="$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php" />
         <option value="$PROJECT_DIR$/src/main/loader/classLoader.php" />
         <option value="$PROJECT_DIR$/src/main/core/Controller.php" />
+        <option value="$PROJECT_DIR$/src/main/loader/smartySingleton.php" />
       </list>
     </option>
   </component>
@@ -224,7 +235,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="loader" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -401,7 +412,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431440283382</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="remove ip filter for unix test">
+      <created>1431440491796</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1431440491796</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -462,7 +479,8 @@
     <MESSAGE value="update gitginore" />
     <MESSAGE value="adding java agent client/server&#10;add blank index&#10;update IHM" />
     <MESSAGE value="fix unix path problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix unix path problem" />
+    <MESSAGE value="remove ip filter for unix test" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove ip filter for unix test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -471,13 +489,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/core/Routeur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1224">
-          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ctrl/index_ctrl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="765">
@@ -836,8 +847,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20611916" vertical-offset="195" max-vertical-offset="1275">
+        <state vertical-scroll-proportion="-4.923077" vertical-offset="195" max-vertical-offset="1275">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/loader/smartySingleton.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="621">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
         </state>
       </provider>
