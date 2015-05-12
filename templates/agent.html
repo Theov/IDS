@@ -8,6 +8,7 @@
 
 <div class="row">
     <div class="col-md-9 center content">
+        <a href="?p=agentConf&a=all" data-toggle="tooltip" data-placement="top" title="Configuration"><span class="glyphicon glyphicon-wrench icon" aria-hidden="true"></span></a>
         <table class="table tableW100 scroll">
             <thead>
             <tr class="active">
@@ -20,20 +21,26 @@
                 <td>
                     <h4>Etat</h4>
                 </td>
+                <td>
+                    <h4>Outils</h4>
+                </td>
             </tr>
             </thead>
 
             <tbody>
-            {foreach from=$agentData item=scan}
+            {foreach from=$agentData item=agent}
             <tr>
                 <td>
-                    {$scan.id}
+                    {$agent.id}
                 </td>
                 <td>
-                    {$scan.location}
+                    {$agent.location}
                 </td>
                 <td>
-                    {$scan.state}
+                    {$agent.state}
+                </td>
+                <td>
+                    <a href="?p=agent&a=launch&id={$agent.id}" data-toggle="tooltip" data-placement="left" title="Lancer un scan"><span class="glyphicon glyphicon-flash icon" aria-hidden="true"></span></a>
                 </td>
             </tr>
             {/foreach}

@@ -1,38 +1,69 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ManagerThread extends Thread{
-    private ArrayList<Socket> agentsSockets;
+    private Map<String, Socket> agentsMap;
     private MySQL db;
     private boolean stop = true;
 
     @Override
     public void run(){
         while (!stop){
-            for(Socket agent : agentsSockets){
-                String msg = readDataFromSocket(agent);
+            for(String agentKey : agentsMap.keySet()){
+                String msg = readDataFromSocket(agentsMap.get(agentKey));
                 resolve(msg);
+                waitNSeconds(300);
             }
 
+            resolveEventualCommand();
+
+            waitNSeconds(1000);
+        }
+    }
+
+    private void resolveEventualCommand() {
+        boolean aCommandIsWaiting = false;
+        String query = "SELECT id, location, command FROM agentcmd WHERE id = 1";
+        ResultSet result = db.select(query);
+
+        try {
+            aCommandIsWaiting = result.first();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        if(aCommandIsWaiting){
             try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
+                System.out.println("COMMAND CATCH");
+                send(result.getString("command"), agentsMap.get(result.getString("location")));
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
+
+            db.clearTable("agentcmd");
+        }else{
+            System.out.println("NOTHING TO DO");
         }
     }
 
     private void resolve(String msg) {
-        if(msg.contains(":")){
-            String location = msg.split(" : ")[0];
-            String state = msg.split(" : ")[1];
-            updateAgentState(location, state);
+        String location = msg.split(" : ")[0];
+        String state = msg.split(" : ")[1];
+
+        if(state.contains("to register")){
+            send("ping", agentsMap.get(location));
+        }else if(state.contains("goToWork")){
+            send("ping", agentsMap.get(location));
         }
+
+        updateAgentState(location, state);
     }
 
     private void updateAgentState(String location, String state) {
@@ -57,6 +88,16 @@ public class ManagerThread extends Thread{
         }
     }
 
+    public void send(String s, Socket agentSocket) {
+        try {
+            PrintWriter out = new PrintWriter(agentSocket.getOutputStream());
+            out.println(s);
+            out.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private String readDataFromSocket(Socket agent) {
         String messageFromAgent = "empty";
 
@@ -76,8 +117,16 @@ public class ManagerThread extends Thread{
         return messageFromAgent;
     }
 
-    public void addAgent(Socket newAgent){
-        agentsSockets.add(newAgent);
+    private void waitNSeconds(int N) {
+        try {
+            Thread.sleep(N);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addAgent(String agentName, Socket newAgent) {
+        agentsMap.put(agentName, newAgent);
     }
 
     public void startThread(){
@@ -93,10 +142,11 @@ public class ManagerThread extends Thread{
     public ManagerThread(MySQL _db){
         db = _db;
         cleanOldAgentsData();
-        agentsSockets = new ArrayList<Socket>();
+        agentsMap = new HashMap<String, Socket>();
     }
 
     private void cleanOldAgentsData() {
+        db.clearTable("agentcmd");
         db.clearTable("agent");
     }
 }

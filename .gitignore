@@ -6,3 +6,4 @@ composer.lock
 /src/agent/agentClient/.idea
 /src/agent/agentServer/target
 /src/agent/agentServer/.idea
+/pck

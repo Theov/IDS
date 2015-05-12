@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -57,10 +59,30 @@ public class ListeningThread extends Thread{
         while (!stop){
             try {
                 Socket newSocket = serverSocket.accept();
-                managerThread.addAgent(newSocket);
+                String agentsName = readDataFromSocket(newSocket);
+                managerThread.addAgent(agentsName, newSocket);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    private String readDataFromSocket(Socket agent) {
+        String messageFromAgent = "empty";
+
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(agent.getInputStream()));
+            messageFromAgent = br.readLine();
+        } catch (IOException e) {
+            messageFromAgent = "error";
+
+            try {
+                agent.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+
+        return messageFromAgent;
     }
 }

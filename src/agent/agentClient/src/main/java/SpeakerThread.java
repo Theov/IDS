@@ -3,7 +3,7 @@ public class SpeakerThread extends Thread{
     private MySQL db;
 
     private ConfigModel modelConfiguration;
-    private AgentModel agentModel;
+    private Agent agent;
 
     private boolean stop = true;
 
@@ -15,7 +15,17 @@ public class SpeakerThread extends Thread{
         modelConfiguration.getConfigDataFromDb();
 
         net = new NetworkManager(modelConfiguration.adress(), modelConfiguration.port());
-        agentModel = new AgentModel();
+        agent = new Agent();
+        net.send(agent.location());
+    }
+
+    @Override
+    public void run(){
+        while (!stop){
+            net.send(agent.location()  + " : " + agent.state());
+            agent.resolve(net.read());
+            wait(500);
+        }
     }
 
     public void startThread(){
@@ -30,14 +40,6 @@ public class SpeakerThread extends Thread{
         db.disconnect();
 
         this.interrupt();
-    }
-
-    @Override
-    public void run(){
-        while (!stop){
-            net.send(agentModel.location()  + " : " + agentModel.state());
-            wait(500);
-        }
     }
 
     public void wait(int n){

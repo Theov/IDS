@@ -1,6 +1,4 @@
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 
@@ -35,5 +33,24 @@ public class NetworkManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String read() {
+        String messageFromAgent = "empty";
+
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(agentSocket.getInputStream()));
+            messageFromAgent = br.readLine();
+        } catch (IOException e) {
+            messageFromAgent = "error";
+
+            try {
+                agentSocket.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+
+        return messageFromAgent;
     }
 }
