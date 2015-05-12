@@ -17,7 +17,7 @@ class Controller{
 
 	private function exec(){
         $this->preventInjectionAttack();
-        $this->checkClientIPAivalability();
+        //$this->checkClientIPAivalability();
 
 		$url = substr(split("&a=", $this->router->getUserRequest())[0], 3);
 		$act = split("&a=", $this->router->getUserRequest())[1];

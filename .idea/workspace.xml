@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8deef3d4-3362-410e-a38e-6a41a6637f2a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/agentConf.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/ctrl/agentConf_ctrl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/core/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/ctrl/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/loader/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/utils/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/index.html" />
-      <change type="DELETED" beforePath="D:\Developpement\ressources\XAMPP\htdocs\HIDS\src\agent\agentClient\src\main\java\AgentModel.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agent/agentServer/src/main/java/ListeningThread.java" afterPath="$PROJECT_DIR$/src/agent/agentServer/src/main/java/ListeningThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agent/agentServer/src/main/java/ManagerThread.java" afterPath="$PROJECT_DIR$/src/agent/agentServer/src/main/java/ManagerThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agent/agentClient/src/main/java/NetworkManager.java" afterPath="$PROJECT_DIR$/src/agent/agentClient/src/main/java/NetworkManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/core/Routeur.php" afterPath="$PROJECT_DIR$/src/main/core/Routeur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agent/agentClient/src/main/java/SpeakerThread.java" afterPath="$PROJECT_DIR$/src/agent/agentClient/src/main/java/SpeakerThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/agent.html" afterPath="$PROJECT_DIR$/templates/agent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/loader/classLoader.php" afterPath="$PROJECT_DIR$/src/main/loader/classLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/default.css" afterPath="$PROJECT_DIR$/webroot/css/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/core/Controller.php" afterPath="$PROJECT_DIR$/src/main/core/Controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HIDS.iws" />
@@ -46,11 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="classLoader.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="classLoader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/loader/classLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49275362" vertical-offset="0" max-vertical-offset="621">
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="459">
               <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20611916" vertical-offset="195" max-vertical-offset="1275">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -122,6 +114,7 @@
         <option value="$PROJECT_DIR$/templates/agent.html" />
         <option value="$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php" />
         <option value="$PROJECT_DIR$/src/main/loader/classLoader.php" />
+        <option value="$PROJECT_DIR$/src/main/core/Controller.php" />
       </list>
     </option>
   </component>
@@ -231,7 +224,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="loader" />
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,13 +395,20 @@
       <option name="project" value="LOCAL" />
       <updated>1431357284400</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix unix path problem">
+      <created>1431440283382</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1431440283382</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1525926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36592594" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -424,7 +424,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36592594" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1525926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -462,7 +461,8 @@
     <MESSAGE value="Refactorisation Source directories" />
     <MESSAGE value="update gitginore" />
     <MESSAGE value="adding java agent client/server&#10;add blank index&#10;update IHM" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding java agent client/server&#10;add blank index&#10;update IHM" />
+    <MESSAGE value="fix unix path problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix unix path problem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -608,13 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.026941363" vertical-offset="0" max-vertical-offset="631">
           <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.831405" vertical-offset="534" max-vertical-offset="1275">
-          <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -835,8 +828,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/loader/classLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49275362" vertical-offset="0" max-vertical-offset="621">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="459">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20611916" vertical-offset="195" max-vertical-offset="1275">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding />
         </state>
       </provider>
