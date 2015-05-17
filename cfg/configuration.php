@@ -3,10 +3,10 @@
 /*   ___   CONSTANTS   ___   */
 
 //Route
-define("BASE_URI", "http://localhost/HIDS/");
+define("BASE_URI", "http://localhost/IDS/");
 
 //Directory
-define("ABS_PATH", "D:/Developpement/ressources/XAMPP/htdocs/HIDS");
+define("ABS_PATH", "/var/www/html/IDS");
 define("SRC_DIR", "/src/main");
 define("UTILS_DIR", "/utils");
 define("CTRL_DIR", "/ctrl");
@@ -28,8 +28,8 @@ define("HLP_CLASS", "/lib/helper.php");
 //Database
 define("DB_HOST", "127.0.0.1");
 define("DB_USER", "root");
-define("DB_PWD", "");
-define("DB_NAME", "hids");
+define("DB_PWD", "01ab02$");
+define("DB_NAME", "ids");
 
 //Security
 define("B_SALT", "FAEIBFapapfejgnaepignaega16g8ae4gaegGAEGa684ga1e5gaeg6ae8g4babeabjnobae");

@@ -1,0 +1,8 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<files>
+	<file>/var/www/html/IDS/bdd</file>
+	<file>/var/www/html/IDS/cache</file>
+	<file>/var/www/html/IDS/configs</file>
+	<file>/var/www/html/IDS/templates_c</file>
+	<file>/var/www/html/IDS/composer.json</file>
+</files>
