@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8deef3d4-3362-410e-a38e-6a41a6637f2a" name="Default" comment="fix smarty errors">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cache/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/configs/index.html" />
+    <list default="true" id="8deef3d4-3362-410e-a38e-6a41a6637f2a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agent/agentServer/src/main/java/ListeningThread.java" afterPath="$PROJECT_DIR$/src/agent/agentServer/src/main/java/ListeningThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/agent/agentServer/src/main/java/ManagerThread.java" afterPath="$PROJECT_DIR$/src/agent/agentServer/src/main/java/ManagerThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/core/Routeur.php" afterPath="$PROJECT_DIR$/src/main/core/Routeur.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/agent.html" afterPath="$PROJECT_DIR$/templates/agent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php" afterPath="$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/configuration.php" afterPath="$PROJECT_DIR$/cfg/configuration.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HIDS.iws" />
@@ -29,51 +33,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="classLoader.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/loader/classLoader.php">
+      <file leaf-file-name="agent_ctrl.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="459">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.32850242" vertical-offset="0" max-vertical-offset="1139">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <folding>
+                <marker date="1432653778743" expanded="true" signature="842:874" placeholder="UPDATE agent..." />
+                <marker date="1432653778743" expanded="true" signature="1027:1134" placeholder="INSERT INTO ..." />
+                <marker date="1432653778743" expanded="true" signature="1201:1238" placeholder="SELECT id, l..agent..." />
+                <marker date="1432653778743" expanded="true" signature="1453:1498" placeholder="SELECT locat..agent..." />
+                <marker date="1432653778743" expanded="true" signature="1729:1772" placeholder="SELECT COUNT..agentcmd..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cfg/configuration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.3076923" vertical-offset="246" max-vertical-offset="867">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
+      <file leaf-file-name="Routeur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/core/Routeur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.923077" vertical-offset="195" max-vertical-offset="1275">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1224">
+              <caret line="10" column="125" selection-start-line="10" selection-start-column="125" selection-end-line="10" selection-end-column="125" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smartySingleton.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/loader/smartySingleton.php">
+      <file leaf-file-name="agent.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/agent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="493">
-              <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configs/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cache/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="986">
+              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -120,7 +120,6 @@
         <option value="$PROJECT_DIR$/webroot/js/chart.js" />
         <option value="$PROJECT_DIR$/src/main/stat_ctrl.php" />
         <option value="$PROJECT_DIR$/src/main/scan_ctrl.php" />
-        <option value="$PROJECT_DIR$/cfg/configuration.php" />
         <option value="$PROJECT_DIR$/src/main/ctrl/user_ctrl.php" />
         <option value="$PROJECT_DIR$/src/main/core/MainController.php" />
         <option value="$PROJECT_DIR$/src/main/ctrl/stat_ctrl.php" />
@@ -137,16 +136,18 @@
         <option value="$PROJECT_DIR$/templates/stat.html" />
         <option value="$PROJECT_DIR$/templates/user.html" />
         <option value="$PROJECT_DIR$/templates/nav.html" />
-        <option value="$PROJECT_DIR$/src/main/core/Routeur.php" />
         <option value="$PROJECT_DIR$/templates/agentConf.html" />
         <option value="$PROJECT_DIR$/src/main/ctrl/agentConf_ctrl.php" />
         <option value="$PROJECT_DIR$/webroot/css/default.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/templates/agent.html" />
-        <option value="$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php" />
         <option value="$PROJECT_DIR$/src/main/loader/classLoader.php" />
         <option value="$PROJECT_DIR$/src/main/core/Controller.php" />
         <option value="$PROJECT_DIR$/src/main/loader/smartySingleton.php" />
+        <option value="$PROJECT_DIR$/src/main/core/Routeur.php" />
+        <option value="$PROJECT_DIR$/templates/agent.html" />
+        <option value="$PROJECT_DIR$/cfg/configuration.php" />
+        <option value="$PROJECT_DIR$/serverlog.txt" />
+        <option value="$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php" />
       </list>
     </option>
   </component>
@@ -188,6 +189,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,37 +208,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HIDS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HIDS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="configs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HIDS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HIDS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cache" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -425,17 +398,23 @@
       <option name="project" value="LOCAL" />
       <updated>1431441957394</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fix smarty errors">
+      <created>1431442056345</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1431442056345</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1525926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36592594" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -445,9 +424,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36592594" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1525926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -497,20 +476,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="147" max-vertical-offset="1088">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ctrl/index_ctrl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="561">
@@ -774,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="238">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,66 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php">
+    <entry file="file://$PROJECT_DIR$/cache/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1020">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="48" />
-          <folding>
-            <marker date="1431427348669" expanded="true" signature="-1:-1" placeholder="UPDATE agent..." />
-            <marker date="1431427348669" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1431427348669" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1431427348669" expanded="true" signature="-1:-1" placeholder="SELECT id, l..agent..." />
-            <marker date="1431427348669" expanded="true" signature="-1:-1" placeholder="SELECT locat..agent..." />
-            <marker date="1431427348669" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..agentcmd..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/core/Routeur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1722973" vertical-offset="51" max-vertical-offset="1224">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/agent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8040541" vertical-offset="255" max-vertical-offset="969">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26409018" vertical-offset="108" max-vertical-offset="816">
-          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/loader/classLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="459">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.923077" vertical-offset="195" max-vertical-offset="1275">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/loader/smartySingleton.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="493">
-          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="647">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -859,15 +767,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="647">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/loader/smartySingleton.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3558776" vertical-offset="0" max-vertical-offset="621">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20611916" vertical-offset="195" max-vertical-offset="1275">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/loader/classLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49275362" vertical-offset="0" max-vertical-offset="621">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/agent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="986">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/core/Routeur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="647">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1224">
+          <caret line="10" column="125" selection-start-line="10" selection-start-column="125" selection-end-line="10" selection-end-column="125" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3076923" vertical-offset="246" max-vertical-offset="867">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverlog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1576507" vertical-offset="0" max-vertical-offset="647">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ctrl/agent_ctrl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32850242" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <marker date="1432653778743" expanded="true" signature="842:874" placeholder="UPDATE agent..." />
+            <marker date="1432653778743" expanded="true" signature="1027:1134" placeholder="INSERT INTO ..." />
+            <marker date="1432653778743" expanded="true" signature="1201:1238" placeholder="SELECT id, l..agent..." />
+            <marker date="1432653778743" expanded="true" signature="1453:1498" placeholder="SELECT locat..agent..." />
+            <marker date="1432653778743" expanded="true" signature="1729:1772" placeholder="SELECT COUNT..agentcmd..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -16,21 +16,39 @@ public class ManagerThread extends Thread{
     @Override
     public void run(){
         while (!stop){
-            for(String agentKey : agentsMap.keySet()){
-                String msg = readDataFromSocket(agentsMap.get(agentKey));
-                resolve(msg);
+            resolveEventualCommand();
+            Map<String, Socket> agentsMap_duplicate = agentsMap;
+
+            for(String agentKey : agentsMap_duplicate.keySet()){
+                String msg = readDataFromSocket(agentsMap_duplicate.get(agentKey));
+
+                if(msg.contains("error")){
+                    System.out.println("agent " + agentKey + " lost !");
+                    agentsMap_duplicate = deleteAgent(agentsMap_duplicate, agentKey);
+                }else {
+                    resolve(msg);
+                }
+
                 waitNSeconds(300);
             }
 
-            resolveEventualCommand();
+            agentsMap = agentsMap_duplicate;
 
             waitNSeconds(1000);
         }
     }
 
+    private Map<String, Socket> deleteAgent(Map<String, Socket> agentsMap, String location) {
+        db.clearTable("agent");
+        agentsMap.remove(location);
+
+        return  agentsMap;
+    }
+
     private void resolveEventualCommand() {
         boolean aCommandIsWaiting = false;
         String query = "SELECT id, location, command FROM agentcmd WHERE id = 1";
+
         ResultSet result = db.select(query);
 
         try {
@@ -41,15 +59,13 @@ public class ManagerThread extends Thread{
 
         if(aCommandIsWaiting){
             try {
-                System.out.println("COMMAND CATCH");
+                System.out.println("Command to resolve : " + result.getString("command") + " from agent located at : " + result.getString("location"));
                 send(result.getString("command"), agentsMap.get(result.getString("location")));
             } catch (SQLException e) {
                 e.printStackTrace();
             }
 
             db.clearTable("agentcmd");
-        }else{
-            System.out.println("NOTHING TO DO");
         }
     }
 
@@ -59,8 +75,12 @@ public class ManagerThread extends Thread{
 
         if(state.contains("to register")){
             send("ping", agentsMap.get(location));
-        }else if(state.contains("goToWork")){
+        }else if(state.contains("working")){
+            send("pong", agentsMap.get(location));
+        }else if(state.contains("ready")){
             send("ping", agentsMap.get(location));
+        }else{
+            System.out.println("Agent " + location + " lost !");
         }
 
         updateAgentState(location, state);
@@ -106,7 +126,6 @@ public class ManagerThread extends Thread{
             messageFromAgent = br.readLine();
         } catch (IOException e) {
             messageFromAgent = "error";
-
             try {
                 agent.close();
             } catch (IOException e1) {
@@ -127,6 +146,7 @@ public class ManagerThread extends Thread{
 
     public void addAgent(String agentName, Socket newAgent) {
         agentsMap.put(agentName, newAgent);
+        System.out.println("New agent connected : " + agentName);
     }
 
     public void startThread(){

@@ -60,7 +60,9 @@ public class ListeningThread extends Thread{
             try {
                 Socket newSocket = serverSocket.accept();
                 String agentsName = readDataFromSocket(newSocket);
-                managerThread.addAgent(agentsName, newSocket);
+
+                if(!agentsName.equals("error"))
+                    managerThread.addAgent(agentsName, newSocket);
             } catch (IOException e) {
                 e.printStackTrace();
             }

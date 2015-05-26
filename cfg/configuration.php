@@ -16,6 +16,9 @@ define("LOADER_DIR", "/loader");
 define("WEB_ROOT_DIR", "/webroot");
 define("TPL_DIR", WEB_ROOT_DIR . "/template");
 
+define("JRE_PATH", "C:/Program Files/Java/jre1.8.0_25/bin/java.exe");
+define("JAR_SRV_LOCATION", ABS_PATH . "/pck/agt-srv/agent.jar");
+
 //Smarty
 define("SMARTY_HOME", "/lib/Smarty/libs/Smarty.class.php");
 define("SMARTY_DEBUG", FALSE);
