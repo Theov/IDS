@@ -22,7 +22,7 @@ abstract class helper{
         }
         else
         {
-            $s = mysql_real_escape_string($s);
+            $s = addslashes($s);
             $s = addcslashes($s, '%_');
         }
 
