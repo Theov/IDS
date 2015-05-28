@@ -8,6 +8,10 @@ class agent_ctrl extends MainController{
         $this->tpl->assign("agentData", $this->getAgentsData());
     }
 
+    public function deploy(){
+       
+    }
+
     public function start(){
         $call = '"'.JRE_PATH . '" -jar "' . JAR_SRV_LOCATION . '" > serverlog.txt &';
         exec('start /B "agent-server" '. $call ,$output,$return);

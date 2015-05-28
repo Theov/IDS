@@ -3,10 +3,10 @@
 /*   ___   CONSTANTS   ___   */
 
 //Route
-define("BASE_URI", "http://localhost/IDS/");
+define("BASE_URI", "http://localhost/HIDS/");
 
 //Directory
-define("ABS_PATH", "/var/www/html/IDS");
+define("ABS_PATH", "D:/Developpement/ressources/XAMPP/htdocs/HIDS");
 define("SRC_DIR", "/src/main");
 define("UTILS_DIR", "/utils");
 define("CTRL_DIR", "/ctrl");
@@ -18,6 +18,7 @@ define("TPL_DIR", WEB_ROOT_DIR . "/template");
 
 define("JRE_PATH", "C:/Program Files/Java/jre1.8.0_25/bin/java.exe");
 define("JAR_SRV_LOCATION", ABS_PATH . "/pck/agt-srv/agent.jar");
+define("CLI_LOCATION", ABS_PATH . "/pck/agt");
 
 //Smarty
 define("SMARTY_HOME", "/lib/Smarty/libs/Smarty.class.php");
@@ -31,8 +32,8 @@ define("HLP_CLASS", "/lib/helper.php");
 //Database
 define("DB_HOST", "127.0.0.1");
 define("DB_USER", "root");
-define("DB_PWD", "01ab02$");
-define("DB_NAME", "ids");
+define("DB_PWD", "");
+define("DB_NAME", "hids");
 
 //Security
 define("B_SALT", "FAEIBFapapfejgnaepignaega16g8ae4gaegGAEGa684ga1e5gaeg6ae8g4babeabjnobae");
